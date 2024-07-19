@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Note App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div id="app">
+        <!-- Authentication -->
+        <div id="auth">
+            <div class="container">
+                <h2 style="text-align: center;">Register</h2>
+                <form id="registerForm">
+                    <div class="input-items">
+                        <input type="text" id="registerName" placeholder="Name" class="form-control" required>
+                        <input type="email" id="registerEmail" placeholder="Email" class="form-control" required>
+                        <input type="password" id="registerPassword" placeholder="Password" class="form-control"
+                            required>
+                    </div>
+                    <div class="button-container">
+                        <button type="submit" class="button">Register</button>
+                    </div>
+                </form>
+            </div>
+            <div class="container">
+                <h2 style="text-align: center;">Login</h2>
+                <form id="loginForm">
+                    <div class="input-items">
+                        <input type="email" id="loginEmail" placeholder="Email" class="form-control" required>
+                        <input type="password" id="loginPassword" placeholder="Password" class="form-control" required>
+                    </div>
+                    <div class="button-container">
+                        <button type="submit" class="button">Login</button>
+                    </div>
+
+                </form>
+            </div>
+        </div>
+
+
+        <div id="mainApp" style="display: none;">
+            <nav>
+                <button id="createNoteBtn">Create Note</button>
+                <button id="homeBtn">Home</button>
+                <input type="text" id="searchInput" placeholder="Search notes..." class="form-control">
+                <button id="archivedNotesBtn">Archived Notes</button>
+                <button id="trashedNotesBtn">Trash</button>
+                <button id="logoutBtn">Logout</button>
+            </nav>
+
+            <div id="notesContainer"></div>
+
+
+            <div id="noteModal" style="display: none;">
+                <form id="noteForm">
+                    <input type="text" id="noteTitle" placeholder="Title" class="form-control" required>
+                    <textarea id="noteContent" placeholder="Content" class="form-control" required></textarea>
+                    <input type="text" id="noteTags" class="form-control" placeholder="Tags (comma separated)">
+                    <input type="color" id="noteColor" value="#ffffff" class="form-control">
+                    <input type="date" id="noteDueDate" class="form-control">
+                    <button type="submit">Save</button>
+                    <button type="button" id="closeNoteModalBtn">Cancel</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <script src="main.js"></script>
+</body>
+
+</html>
